@@ -12,6 +12,7 @@ export class MessageGenerator {
       id: randUuid(),
       int: randNumber(),
       float: randFloat({
+        min: 0,
         fraction: randNumber({
           min: 1,
           max: 18
