@@ -1,0 +1,10 @@
+<form [formGroup]="form" class="form">
+  <label for="interval">Interval: </label>
+  <input id="interval" type="text" [formControlName]="'interval'">
+
+  <label for="message-size">Message size: </label>
+  <input id="message-size" type="text" [formControlName]="'messageSize'">
+
+  <label for="additional-ids">Additional ids: </label>
+  <input id="additional-ids" type="text" [formControlName]="'additionalIds'">
+</form>
