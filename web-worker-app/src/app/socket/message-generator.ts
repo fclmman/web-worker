@@ -4,6 +4,9 @@ import {randColor, randFloat, randNumber, randUuid} from "@ngneat/falso";
 
 export class MessageGenerator {
   static getMessage(size: number) {
+    if(size <= 0) {
+      size = 1;
+    }
     return Array(size).fill(0).map(this.generateMessage);
   }
 

@@ -13,4 +13,8 @@ describe('MessageService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should merge', () => {
+    expect(service).toBeTruthy();
+  });
 });

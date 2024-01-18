@@ -26,7 +26,7 @@ export class PseudoConnection {
     return this._messageSize
   }
 
-  private intervalId?: NodeJS.Timeout;
+  private intervalId?: any;
 
   constructor(interval: number, messageSize: number) {
     this.interval = interval;
