@@ -6,8 +6,14 @@ import Decimal from "decimal.js";
   standalone: true
 })
 export class DecimalPrecisionPipe implements PipeTransform {
-
-  transform(value: number, precision: number): unknown {
-    return new Decimal(value).toPrecision(precision);
+  transform(value: unknown, precision: number): unknown {
+    if (value === null || value === undefined) {
+      return '';
+    }
+    if (typeof value === 'number' || (typeof value === 'string' && !isNaN(Number(value)))) {
+      return new Decimal(value).toPrecision(precision);
+    } else {
+      throw new Error(`${value} is not a number`)
+    }
   }
 }

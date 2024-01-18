@@ -5,4 +5,9 @@ describe('DecimalPrecisionPipe', () => {
     const pipe = new DecimalPrecisionPipe();
     expect(pipe).toBeTruthy();
   });
+
+  it('parse number', () => {
+    const pipe = new DecimalPrecisionPipe();
+    expect(pipe.transform(156.88, 10)).toBeTruthy();
+  });
 });
